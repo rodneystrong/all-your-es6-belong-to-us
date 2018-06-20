@@ -20,5 +20,8 @@ test({ name: 'n', color: 'hi' });
 test({ color: 'n', name: 'hi' });
 
 //template strings
+console.log(`
+this is a multi line template string with a variable ${test.name}
+`);
 
 //make sense?
