@@ -1,17 +1,16 @@
 const returnName = (dob, name = 'zaxch') => {
-  //so the above arguments are saying: assign the properties 'dob' 
-  //'name' to the variable 'test'. is it implied that 'test' is 
+  //so the above arguments are saying: assign the properties 'dob'
+  //'name' to the variable 'test'. is it implied that 'test' is
   //now an object?
-  return name
-}
-returnName('4/4', 'test', 'blah', 'bob')
+  return name;
+};
+returnName('4/4', 'test', 'blah', 'bob');
 //or
 
 const test = ({ name = 'zach', dob = 13, color = 'black' }) => {
-
-  //in the above arguemnt, it's saying: 
+  //in the above arguemnt, it's saying:
   return dob * 12 + name + color;
-}
+};
 
 //test({ name: 'Test', dob: '4/4' })
 
@@ -25,3 +24,8 @@ this is a multi line template string with a variable ${test.name}
 `);
 
 //make sense?
+
+//testing let declaration
+let car = 'ford';
+
+let car = 'chevy';
