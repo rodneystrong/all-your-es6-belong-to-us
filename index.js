@@ -25,7 +25,12 @@ this is a multi line template string with a variable ${test.name}
 
 //make sense?
 
+//testing temporal dead zone
+console.log(car);
+
 //testing let declaration
 let car = 'ford';
 
-let car = 'chevy';
+//let car = 'chevy';
+
+console.log(car);
