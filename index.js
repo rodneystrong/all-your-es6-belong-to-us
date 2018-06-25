@@ -26,7 +26,8 @@ this is a multi line template string with a variable ${test.name}
 //make sense?
 
 //testing temporal dead zone
-console.log(car);
+//console.log(car);
+//correctly getting 'car is not defined' reference error
 
 //testing let declaration
 let car = 'ford';
