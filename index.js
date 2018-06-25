@@ -36,10 +36,10 @@ let car = 'ford';
 console.log(car);
 
 //default function arguments
-function calcBill(total, tax, tip) {
+function calcBill(total, tax = 0.08, tip = 0.2) {
   return total + total * tax + total * tip;
 }
 
-let myBill = calcBill(58, 0.07, 0.2);
+let myBill = calcBill(60);
 
 console.log(myBill);
