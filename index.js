@@ -59,7 +59,7 @@ const racers = ['alex', 'cynthia', 'rachel', 'dindo'];
 
 const results = racers.map((racer, i) => ({
   name: racer,
-  race: race,
+  race,
   place: i + 1,
 }));
 
