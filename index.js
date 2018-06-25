@@ -40,6 +40,6 @@ function calcBill(total, tax = 0.08, tip = 0.2) {
   return total + total * tax + total * tip;
 }
 
-let myBill = calcBill(60);
+let myBill = calcBill(60, 0.1, undefined);
 
 console.log(myBill);
