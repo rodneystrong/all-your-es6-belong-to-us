@@ -33,5 +33,13 @@ this is a multi line template string with a variable ${test.name}
 let car = 'ford';
 
 //let car = 'chevy';
-
 console.log(car);
+
+//default function arguments
+function calcBill(total, tax, tip) {
+  return total + total * tax + total * tip;
+}
+
+let myBill = calcBill(58, 0.07, 0.2);
+
+console.log(myBill);
