@@ -43,3 +43,11 @@ function calcBill(total, tax = 0.08, tip = 0.2) {
 let myBill = calcBill(60, 0.1, undefined);
 
 console.log(myBill);
+
+//arrow functioooooons
+let names = ['alex', 'rachel', 'kara', 'vic'];
+
+//add 'kang' to all the names
+let fullNames = names.map(name => `${name} kang`);
+
+console.log(fullNames);
