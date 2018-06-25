@@ -50,4 +50,17 @@ let names = ['alex', 'rachel', 'kara', 'vic'];
 //add 'kang' to all the names
 let fullNames = names.map(name => `${name} kang`);
 
-console.log(fullNames);
+console.table(fullNames);
+//create the race
+const race = 'spartan tahoe';
+//create the racers
+const racers = ['alex', 'cynthia', 'rachel', 'dindo'];
+//map them out into an object with their place in the race
+
+const results = racers.map((racer, i) => ({
+  name: racer,
+  race: race,
+  place: i + 1,
+}));
+
+console.table(results);
