@@ -64,3 +64,10 @@ const results = racers.map((racer, i) => ({
 }));
 
 console.table(results);
+
+//filter out all the old people
+const ages = [493, 34, 113, 89, 315, 5, 33, 7, 13, 755, 89];
+
+const older = ages.filter(age => age >= 55);
+
+console.log(older);
