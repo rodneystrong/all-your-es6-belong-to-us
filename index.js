@@ -1,3 +1,13 @@
+//the click handling part
+//grab the element
+const theBox = document.querySelector('.box');
+
+//create the click event
+theBox.addEventListener('click', function() {
+  const opening = 'opening';
+  const open = 'open';
+});
+
 const returnName = (dob, name = 'zaxch') => {
   //so the above arguments are saying: assign the properties 'dob'
   //'name' to the variable 'test'. is it implied that 'test' is
