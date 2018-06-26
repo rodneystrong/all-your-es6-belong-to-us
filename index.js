@@ -4,8 +4,12 @@ const theBox = document.querySelector('.box');
 
 //create the click event
 theBox.addEventListener('click', function() {
-  const opening = 'opening';
-  const open = 'open';
+  let opening = 'opening';
+  let open = 'open';
+
+  if (this.classList.contains(opening)) {
+    [opening, open] = [open, opening];
+  }
 
   console.log(this);
   this.classList.toggle(opening);
