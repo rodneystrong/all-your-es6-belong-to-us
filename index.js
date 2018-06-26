@@ -6,6 +6,13 @@ const theBox = document.querySelector('.box');
 theBox.addEventListener('click', function() {
   const opening = 'opening';
   const open = 'open';
+
+  console.log(this);
+  this.classList.toggle(opening);
+  setTimeout(() => {
+    console.log(this);
+    this.classList.toggle(open);
+  }, 200);
 });
 
 const returnName = (dob, name = 'zaxch') => {
