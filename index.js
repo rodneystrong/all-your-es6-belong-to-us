@@ -92,3 +92,9 @@ const ages = [493, 34, 113, 89, 315, 5, 33, 7, 13, 755, 89];
 const older = ages.filter(age => age >= 55);
 
 console.log(older);
+
+const nums = [134, 5345, 45, 11, 6, 68];
+
+const oldPeeps = nums.filter(age => age > 100);
+
+console.log(oldPeeps);
