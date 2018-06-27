@@ -98,3 +98,13 @@ const nums = [134, 5345, 45, 11, 6, 68];
 const oldPeeps = nums.filter(age => age > 100);
 
 console.log(oldPeeps);
+
+//select all list items and convert to array
+
+//filter for only li's that have 'flexbox' in them
+
+//map down to list of time strings
+
+//map to array of seconds
+
+//reduce to get total
