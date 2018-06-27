@@ -101,12 +101,18 @@ const oldPeeps = nums.filter(age => age > 100);
 
 //select all list items and convert to array
 const lis = Array.from(document.querySelectorAll('[data-time]'));
-console.table(lis);
+
 //filter for only li's that have 'flexbox' in them
-const filtered = lis.filter(li => li.textContent.includes('Flexbox'));
-console.table(filtered);
-//map down to list of time strings
+const filtered = lis
+  .filter(li => li.textContent.includes('Flexbox'))
 
-//map to array of seconds
-
+  //map down to list of time strings
+  .map(item => item.dataset.time)
+  //map to array of seconds
+  .map(time => {
+    //split in half, then parsefloat
+    const parts = time.split(':').map(part => parseFloat(part));
+    return parts[0] * 60;
+  });
 //reduce to get total
+console.table(filtered);
