@@ -103,7 +103,8 @@ const oldPeeps = nums.filter(age => age > 100);
 const lis = Array.from(document.querySelectorAll('[data-time]'));
 console.table(lis);
 //filter for only li's that have 'flexbox' in them
-
+const filtered = lis.filter(li => li.textContent.includes('Flexbox'));
+console.table(filtered);
 //map down to list of time strings
 
 //map to array of seconds
