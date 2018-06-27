@@ -40,9 +40,9 @@ test({ name: 'n', color: 'hi' });
 test({ color: 'n', name: 'hi' });
 
 //template strings
-console.log(`
-this is a multi line template string with a variable ${test.name}
-`);
+// console.log(`
+// this is a multi line template string with a variable ${test.name}
+// `);
 
 //make sense?
 
@@ -54,7 +54,7 @@ this is a multi line template string with a variable ${test.name}
 let car = 'ford';
 
 //let car = 'chevy';
-console.log(car);
+//console.log(car);
 
 //default function arguments
 function calcBill(total, tax = 0.08, tip = 0.2) {
@@ -63,7 +63,7 @@ function calcBill(total, tax = 0.08, tip = 0.2) {
 
 let myBill = calcBill(60, 0.1, undefined);
 
-console.log(myBill);
+//console.log(myBill);
 
 //arrow functioooooons
 let names = ['alex', 'rachel', 'kara', 'vic'];
@@ -71,7 +71,7 @@ let names = ['alex', 'rachel', 'kara', 'vic'];
 //add 'kang' to all the names
 let fullNames = names.map(name => `${name} kang`);
 
-console.table(fullNames);
+//console.table(fullNames);
 //create the race
 const race = 'spartan tahoe';
 //create the racers
@@ -84,23 +84,24 @@ const results = racers.map((racer, i) => ({
   place: i + 1,
 }));
 
-console.table(results);
+//console.table(results);
 
 //filter out all the old people
 const ages = [493, 34, 113, 89, 315, 5, 33, 7, 13, 755, 89];
 
 const older = ages.filter(age => age >= 55);
 
-console.log(older);
+//console.log(older);
 
 const nums = [134, 5345, 45, 11, 6, 68];
 
 const oldPeeps = nums.filter(age => age > 100);
 
-console.log(oldPeeps);
+//console.log(oldPeeps);
 
 //select all list items and convert to array
-
+const lis = Array.from(document.querySelectorAll('[data-time]'));
+console.table(lis);
 //filter for only li's that have 'flexbox' in them
 
 //map down to list of time strings
