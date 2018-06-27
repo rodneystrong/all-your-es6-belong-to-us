@@ -112,7 +112,10 @@ const filtered = lis
   .map(time => {
     //split in half, then parsefloat
     const parts = time.split(':').map(part => parseFloat(part));
-    return parts[0] * 60;
-  });
-//reduce to get total
+    return parts[0] * 60 + parts[1];
+  })
+  //reduce to get total
+  .reduce((total, seconds) => total + seconds);
 console.table(filtered);
+
+console.log(filtered / 60 / 60);
