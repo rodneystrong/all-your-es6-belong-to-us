@@ -89,7 +89,9 @@ const results = racers.map((racer, i) => ({
 //filter out all the old people
 const ages = [493, 34, 113, 89, 315, 5, 33, 7, 13, 755, 89];
 
-//console.log(oldPeeps);
+const oldies = ages.filter(age => age > 60);
+
+console.log(oldies);
 
 //select all list items and convert to array
 const lis = Array.from(document.querySelectorAll('[data-time]'));
