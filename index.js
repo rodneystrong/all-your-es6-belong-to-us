@@ -129,7 +129,7 @@ const content = `
   </div>
 `;
 
-document.querySelector('.content').innerHTML = content;
+document.querySelector('.person-content').innerHTML = content;
 
 //array of dogs and you wanna loop over and put each into an <li>
 const doggies = [
@@ -147,4 +147,4 @@ const dogContent = `
   </ul>
 `;
 
-document.querySelector('.content').innerHTML = dogContent;
+document.querySelector('.dog-content').innerHTML = dogContent;
