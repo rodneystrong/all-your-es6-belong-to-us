@@ -141,7 +141,9 @@ const doggies = [
 
 const dogContent = `
   <ul>
-    ${doggies.map(dog => `<li>${dog.name} is already ${dog.age}!</li>`)}
+    ${doggies
+      .map(dog => `<li>${dog.name} is already ${dog.age}!</li>`)
+      .join('')}
   </ul>
 `;
 
