@@ -130,3 +130,19 @@ const content = `
 `;
 
 document.querySelector('.content').innerHTML = content;
+
+//array of dogs and you wanna loop over and put each into an <li>
+const doggies = [
+  { name: 'zed', age: 3 },
+  { name: 'cookie', age: 1 },
+  { name: 'yolo', age: 13 },
+  { name: 'lel', age: 8 },
+];
+
+const dogContent = `
+  <ul>
+    ${doggies.map(dog => `<li>${dog.name} is already ${dog.age}!</li>`)}
+  </ul>
+`;
+
+document.querySelector('.content').innerHTML = dogContent;
