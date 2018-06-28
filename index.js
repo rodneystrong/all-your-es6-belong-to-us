@@ -155,7 +155,7 @@ const song = {
   artist: 'g easy',
   featuring: 'bebe rhexa',
 };
-const markup = `
+const songContent = `
   <div class="song">
     <p>
       ${song.name} — ${song.artist}
@@ -163,3 +163,5 @@ const markup = `
     </p>
   </div>
 `;
+
+document.querySelector('.song-content').innerHTML = songContent;
