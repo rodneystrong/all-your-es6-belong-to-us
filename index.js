@@ -113,3 +113,20 @@ const filtered = lis
 console.table(filtered);
 
 console.log(filtered / 60 / 60);
+
+//html in template strings
+const person = {
+  name: 'aleeex',
+  city: 'NY',
+  age: 30,
+};
+
+const content = `
+  <div class="person">
+    <h2>${person.name}</h2>
+    <p>city: ${person.city}</p>
+    <p>He's already ${person.age}</p>
+  </div>
+`;
+
+document.querySelector('.content').innerHTML = content;
