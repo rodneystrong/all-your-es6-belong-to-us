@@ -148,3 +148,18 @@ const dogContent = `
 `;
 
 document.querySelector('.dog-content').innerHTML = dogContent;
+
+//template strings with if else
+const song = {
+  name: 'My Myself and I',
+  artist: 'g easy',
+  featuring: 'bebe rhexa',
+};
+const markup = `
+  <div class="song">
+    <p>
+      ${song.name} — ${song.artist}
+      ${song.featuring ? `(Featuring ${song.featuring})` : ''}
+    </p>
+  </div>
+`;
