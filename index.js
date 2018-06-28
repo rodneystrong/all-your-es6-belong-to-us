@@ -165,3 +165,18 @@ const songContent = `
 `;
 
 document.querySelector('.song-content').innerHTML = songContent;
+
+//template strings with advanced nesting
+const beer = {
+  name: 'Belgian Wit',
+  brewery: 'Steam Whistle Brewery',
+  keywords: ['pale', 'cloudy', 'spiced', 'crisp'],
+};
+//put the keywords array into the content below
+const beerContent = `
+  <div class="beer">
+    <h2>${beer.name}</h2>
+    <p>From ${beer.brewery}</p>
+    ${renderBeers()}
+  </div>
+`;
