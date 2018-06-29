@@ -188,3 +188,5 @@ const beerContent = `
     ${renderBeers(beer.keywords)}
   </div>
 `;
+
+document.querySelector('.beer-content').innerHTML = beerContent;
