@@ -176,7 +176,7 @@ const beer = {
 function renderBeers(keywords) {
   return `
     <ul>
-      ${keywords.map(keyword => `<li>${keyword}</li>`)}
+      ${keywords.map(keyword => `<li>${keyword}</li>`).join('')}
     </ul>
   `;
 }
