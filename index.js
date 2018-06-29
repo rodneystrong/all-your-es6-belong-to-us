@@ -173,10 +173,18 @@ const beer = {
   keywords: ['pale', 'cloudy', 'spiced', 'crisp'],
 };
 //put the keywords array into the content below
+function renderBeers(keywords) {
+  return `
+    <ul>
+      ${keywords.map(keyword => `<li>${keyword}</li>`)}
+    </ul>
+  `;
+}
+
 const beerContent = `
   <div class="beer">
     <h2>${beer.name}</h2>
     <p>From ${beer.brewery}</p>
-    ${renderBeers()}
+    ${renderBeers(beer.keywords)}
   </div>
 `;
