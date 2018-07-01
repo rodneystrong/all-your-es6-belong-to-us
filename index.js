@@ -183,7 +183,7 @@ function renderBeers(keywords) {
 
 const beerContent = `
   <div class="beer">
-    <h2>${beer.name}</h2>
+    <h2 contenteditable>${beer.name}</h2>
     <p>From ${beer.brewery}</p>
     ${renderBeers(beer.keywords)}
   </div>
