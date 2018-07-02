@@ -200,7 +200,10 @@ const es6Car = {
 //make them all right-aligned
 
 function rightAlign(str, length = 20) {
-  return `-> ${' '.repeat(length)} ${str}`;
+  if (typeof str !== 'string') {
+    str.toString();
+  }
+  return `-> ${' '.repeat(length - str.length)} ${str}`;
 }
 
 console.log(rightAlign(es6Car.make));
