@@ -192,7 +192,7 @@ const beerContent = `
 document.querySelector('.beer-content').innerHTML = beerContent;
 
 //es6 string methods
-const car = {
+const es6Car = {
   make: 'bmw',
   model: 'm6',
   year: 2020,
@@ -203,6 +203,6 @@ function rightAlign(str, length = 20) {
   return `-> ${' '.repeat(length)} ${str}`;
 }
 
-console.log(make);
-console.log(model);
-console.log(year);
+console.log(rightAlign(es6Car.make));
+console.log(rightAlign(es6Car.model));
+console.log(rightAlign(es6Car.year));
