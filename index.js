@@ -190,3 +190,19 @@ const beerContent = `
 `;
 
 document.querySelector('.beer-content').innerHTML = beerContent;
+
+//es6 string methods
+const car = {
+  make: 'bmw',
+  model: 'm6',
+  year: 2020,
+};
+//make them all right-aligned
+
+function rightAlign(str, length = 20) {
+  return `-> ${' '.repeat(length)} ${str}`;
+}
+
+console.log(make);
+console.log(model);
+console.log(year);
