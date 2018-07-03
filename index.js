@@ -223,3 +223,5 @@ const dPerson = {
     },
   },
 };
+
+const { man, girl } = dPerson.hair.type;
