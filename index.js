@@ -211,6 +211,15 @@ console.log(rightAlign(es6Car.model));
 console.log(rightAlign(es6Car.year));
 
 //destructuring objects
-const {make, model, year} = es6Car;
+const { make, model, year } = es6Car;
 
 console.log(make, model, year);
+
+const dPerson = {
+  hair: {
+    type: {
+      man: 'black',
+      girl: 'white',
+    },
+  },
+};
