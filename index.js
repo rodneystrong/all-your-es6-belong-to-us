@@ -209,3 +209,8 @@ function rightAlign(str, length = 20) {
 console.log(rightAlign(es6Car.make));
 console.log(rightAlign(es6Car.model));
 console.log(rightAlign(es6Car.year));
+
+//destructuring objects
+const {make, model, year} = es6Car;
+
+console.log(make, model, year);
