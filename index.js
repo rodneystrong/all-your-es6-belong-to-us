@@ -225,3 +225,5 @@ const dPerson = {
 };
 
 const { man, girl } = dPerson.hair.type;
+
+const { make: amake, model: amodel } = es6Car;
