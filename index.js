@@ -230,6 +230,6 @@ const { man, girl } = dPerson.hair.type;
 
 const { make: amake, model: amodel } = es6Car;
 
-const deets = ['ale', 43, 'hey.com'];
+const deets = ['ale', 43, 'hey.com', 3434, 'another', 'lel'];
 
-const [aperson, age, site] = deets;
+const [aperson, age, ...site] = deets;
