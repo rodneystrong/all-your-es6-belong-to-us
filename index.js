@@ -254,3 +254,7 @@ function convertCurrency(amount) {
 }
 
 const hundo = convertCurrency(100);
+console.log(hundo);
+//destructuring what you returned!
+let desFunc = ({ USD, GPB, AUD, MEX } = convertCurrency(100));
+console.log(USD, AUD, GPB, MEX);
