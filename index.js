@@ -5,21 +5,21 @@ const theBox = document.querySelector('.box');
 console.log(theBox);
 
 //create the click event
-theBox.addEventListener('click', function() {
-  let opening = 'opening';
-  let open = 'open';
+// theBox.addEventListener('click', function() {
+//   let opening = 'opening';
+//   let open = 'open';
 
-  if (this.classList.contains(opening)) {
-    [opening, open] = [open, opening];
-  }
+//   if (this.classList.contains(opening)) {
+//     [opening, open] = [open, opening];
+//   }
 
-  console.log(this);
-  this.classList.toggle(opening);
-  setTimeout(() => {
-    console.log(this);
-    this.classList.toggle(open);
-  }, 200);
-});
+//   console.log(this);
+//   this.classList.toggle(opening);
+//   setTimeout(() => {
+//     console.log(this);
+//     this.classList.toggle(open);
+//   }, 200);
+// });
 
 const returnName = (dob, name = 'zaxch') => {
   //so the above arguments are saying: assign the properties 'dob'
@@ -99,22 +99,22 @@ console.log(oldies);
 const lis = Array.from(document.querySelectorAll('[data-time]'));
 
 //filter for only li's that have 'flexbox' in them
-const filtered = lis
-  .filter(li => li.textContent.includes('Flexbox'))
+// const filtered = lis
+//   .filter(li => li.textContent.includes('Flexbox'))
 
-  //map down to list of time strings
-  .map(item => item.dataset.time)
-  //map to array of seconds
-  .map(time => {
-    //split in half, then parsefloat
-    const parts = time.split(':').map(part => parseFloat(part));
-    return parts[0] * 60 + parts[1];
-  })
-  //reduce to get total
-  .reduce((total, seconds) => total + seconds);
-console.table(filtered);
+//   //map down to list of time strings
+//   .map(item => item.dataset.time)
+//   //map to array of seconds
+//   .map(time => {
+//     //split in half, then parsefloat
+//     const parts = time.split(':').map(part => parseFloat(part));
+//     return parts[0] * 60 + parts[1];
+//   })
+//   //reduce to get total
+//   .reduce((total, seconds) => total + seconds);
+// console.table(filtered);
 
-console.log(filtered / 60 / 60);
+//console.log(filtered / 60 / 60);
 
 //html in template strings
 const person = {
@@ -131,7 +131,7 @@ const content = `
   </div>
 `;
 
-document.querySelector('.person-content').innerHTML = content;
+//document.querySelector('.person-content').innerHTML = content;
 
 //array of dogs and you wanna loop over and put each into an <li>
 const doggies = [
@@ -149,7 +149,7 @@ const dogContent = `
   </ul>
 `;
 
-document.querySelector('.dog-content').innerHTML = dogContent;
+//document.querySelector('.dog-content').innerHTML = dogContent;
 
 //template strings with if else
 const song = {
@@ -166,7 +166,7 @@ const songContent = `
   </div>
 `;
 
-document.querySelector('.song-content').innerHTML = songContent;
+//document.querySelector('.song-content').innerHTML = songContent;
 
 //template strings with advanced nesting
 const beer = {
@@ -191,7 +191,7 @@ const beerContent = `
   </div>
 `;
 
-document.querySelector('.beer-content').innerHTML = beerContent;
+//document.querySelector('.beer-content').innerHTML = beerContent;
 
 //es6 string methods
 const es6Car = {
@@ -230,6 +230,14 @@ const { man, girl } = dPerson.hair.type;
 
 const { make: amake, model: amodel } = es6Car;
 
+//destructuring arrays
 const deets = ['ale', 43, 'hey.com', 3434, 'another', 'lel'];
 
 const [aperson, age, ...site] = deets;
+
+//swap vars with destructuring
+let first1 = 'number 1';
+let second1 = 'number 2';
+console.log(first1, second1);
+[first1, second1] = [second1, first1];
+console.log(first1, second1);
