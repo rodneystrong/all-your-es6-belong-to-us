@@ -241,3 +241,16 @@ let second1 = 'number 2';
 console.log(first1, second1);
 [first1, second1] = [second1, first1];
 console.log(first1, second1);
+
+//destructuring and functions
+function convertCurrency(amount) {
+  const converted = {
+    USD: amount * 0.76,
+    GPB: amount * 0.53,
+    AUD: amount * 1.01,
+    MEX: amount * 13.3,
+  };
+  return converted;
+}
+
+const hundo = convertCurrency(100);
