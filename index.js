@@ -5,21 +5,37 @@ const theBox = document.querySelector('.box');
 console.log(theBox);
 
 //create the click event
-// theBox.addEventListener('click', function() {
-//   let opening = 'opening';
-//   let open = 'open';
+theBox.addEventListener('click', function() {
+  let opening = 'opening';
+  let open = 'open';
 
-//   if (this.classList.contains(opening)) {
-//     [opening, open] = [open, opening];
-//   }
+  if (this.classList.contains(opening)) {
+    [opening, open] = [open, opening];
+  }
 
-//   console.log(this);
-//   this.classList.toggle(opening);
-//   setTimeout(() => {
-//     console.log(this);
-//     this.classList.toggle(open);
-//   }, 200);
-// });
+  console.log(this);
+  this.classList.toggle(opening);
+  setTimeout(() => {
+    console.log(this);
+    this.classList.toggle(open);
+  }, 200);
+});
+
+const theBody = document.querySelector('body');
+
+theBody.addEventListener('click', function() {
+  let opening = 'opening';
+  let open = 'open';
+
+  if (theBox.classList.contains(opening)) {
+    [opening, open] = [open, opening];
+  }
+  theBox.classList.toggle(opening, open);
+  setTimeout(() => {
+    console.log(this);
+    this.classList.toggle(open, opening);
+  }, 200);
+});
 
 const returnName = (dob, name = 'zaxch') => {
   //so the above arguments are saying: assign the properties 'dob'
@@ -258,3 +274,13 @@ console.log(hundo);
 //destructuring what you returned!
 let desFunc = ({ USD: USS, GPB, AUD, MEX } = convertCurrency(100));
 console.log(USS, AUD, GPB, MEX);
+
+const kevin = 'kkears';
+
+let thePhrase = 'my boy ' + kevin + " don't know shit";
+
+console.log(thePhrase);
+
+let newPhrase = `my boy ${kevin} is the shit`;
+
+console.log(newPhrase);
