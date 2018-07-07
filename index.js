@@ -301,7 +301,7 @@ meats.forEach(meat => console.log(meat));
 
 for (const meat of meats) {
   if (meat === 'rib') {
-    break;
+    continue;
   }
   console.log(`${meat} juicy`);
 }
