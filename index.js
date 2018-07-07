@@ -4,38 +4,38 @@ const theBox = document.querySelector('.box');
 
 console.log(theBox);
 
-//create the click event
-theBox.addEventListener('click', function() {
-  let opening = 'opening';
-  let open = 'open';
+// //create the click event
+// theBox.addEventListener('click', function() {
+//   let opening = 'opening';
+//   let open = 'open';
 
-  if (this.classList.contains(opening)) {
-    [opening, open] = [open, opening];
-  }
+//   if (this.classList.contains(opening)) {
+//     [opening, open] = [open, opening];
+//   }
 
-  console.log(this);
-  this.classList.toggle(opening);
-  setTimeout(() => {
-    console.log(this);
-    this.classList.toggle(open);
-  }, 200);
-});
+//   console.log(this);
+//   this.classList.toggle(opening);
+//   setTimeout(() => {
+//     console.log(this);
+//     this.classList.toggle(open);
+//   }, 200);
+// });
 
-const theBody = document.querySelector('body');
+// const theBody = document.querySelector('body');
 
-theBody.addEventListener('click', function() {
-  let opening = 'opening';
-  let open = 'open';
+// theBody.addEventListener('click', function() {
+//   let opening = 'opening';
+//   let open = 'open';
 
-  if (theBox.classList.contains(opening)) {
-    [opening, open] = [open, opening];
-  }
-  theBox.classList.toggle(opening, open);
-  setTimeout(() => {
-    console.log(this);
-    this.classList.toggle(open, opening);
-  }, 200);
-});
+//   if (theBox.classList.contains(opening)) {
+//     [opening, open] = [open, opening];
+//   }
+//   theBox.classList.toggle(opening, open);
+//   setTimeout(() => {
+//     console.log(this);
+//     this.classList.toggle(open, opening);
+//   }, 200);
+// });
 
 const returnName = (dob, name = 'zaxch') => {
   //so the above arguments are saying: assign the properties 'dob'
@@ -284,3 +284,11 @@ console.log(thePhrase);
 let newPhrase = `my boy ${kevin} is the shit`;
 
 console.log(newPhrase);
+
+//how to make the order of the arguments in a function not matter
+//put the arguments in an object!
+function tipCalc({ subtotal, tip = 0.15, tax }) {
+  return subtotal + tax * subtotal + tip * subtotal;
+}
+
+console.log(tipCalc({ subtotal: 100, tax: 0.08 }));
