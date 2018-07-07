@@ -293,3 +293,15 @@ function tipCalc({ subtotal = 90, tip = 0.15, tax = 0.08 } = {}) {
 
 console.log(tipCalc({ subtotal: 100, tax: 0.08 }));
 console.log(tipCalc());
+
+//for of loop. Used to loop over anything that is an iterable
+const meats = ['flank', 'rib', 'breast', 'chuck'];
+//.forEach you can't use a break or continue statement, in case you wanted to skip an item in the array
+meats.forEach(meat => console.log(meat));
+
+for (const meat of meats) {
+  if (meat === 'rib') {
+    break;
+  }
+  console.log(`${meat} juicy`);
+}
