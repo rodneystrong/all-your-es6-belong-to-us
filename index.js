@@ -287,8 +287,9 @@ console.log(newPhrase);
 
 //how to make the order of the arguments in a function not matter
 //put the arguments in an object!
-function tipCalc({ subtotal, tip = 0.15, tax }) {
+function tipCalc({ subtotal = 90, tip = 0.15, tax = 0.08 } = {}) {
   return subtotal + tax * subtotal + tip * subtotal;
 }
 
 console.log(tipCalc({ subtotal: 100, tax: 0.08 }));
+console.log(tipCalc());
