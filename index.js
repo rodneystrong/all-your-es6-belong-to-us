@@ -319,3 +319,9 @@ for (const para of ps) {
     console.log(`you clicked this ${this.textContent}`);
   });
 }
+
+//practice for in loop over object properties + values
+for (prop in es6Car) {
+  console.log(prop);
+  console.log(`the ${prop} is ${es6Car[prop]}`);
+}
