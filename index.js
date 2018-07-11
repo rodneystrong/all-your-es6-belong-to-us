@@ -314,8 +314,7 @@ for (const item of stringTest) {
 const ps = document.querySelectorAll('p');
 console.table(ps);
 
-for (para of ps) {
-  console.log(para);
+for (const para of ps) {
   para.addEventListener('click', function() {
     console.log(`you clicked this ${para.textContent}`);
   });
