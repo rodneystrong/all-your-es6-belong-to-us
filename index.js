@@ -310,3 +310,10 @@ const stringTest = 'this yea';
 for (const item of stringTest) {
   console.log(item);
 }
+
+const ps = document.querySelectorAll('p');
+console.table(ps);
+
+for (para of ps) {
+  console.log(para);
+}
