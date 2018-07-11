@@ -316,4 +316,7 @@ console.table(ps);
 
 for (para of ps) {
   console.log(para);
+  para.addEventListener('click', function() {
+    console.log(`you clicked this ${para.textContent}`);
+  });
 }
