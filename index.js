@@ -305,3 +305,8 @@ for (const meat of meats) {
   }
   console.log(`${meat} juicy`);
 }
+
+const stringTest = 'this yea';
+for (const item of stringTest) {
+  console.log(item);
+}
