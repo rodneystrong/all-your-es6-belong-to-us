@@ -339,9 +339,10 @@ console.log(allNames);
 const theSpread = document.querySelector('.jump');
 console.log(theSpread);
 const splitSpread = [...theSpread.textContent]
-  .map(letter => `<span>${letter}</span>`)
+  .map(letter => `<span>${letter.toUpperCase()}</span>`)
   .join('');
 console.log(splitSpread);
+theSpread.innerHTML = splitSpread;
 //const spanned = splitSpread.map(letter => `<span>${letter}</span>`).join('');
 //theSpread.innerHTML = spanned;
 //console.log(spanned);
