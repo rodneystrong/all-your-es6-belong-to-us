@@ -1,8 +1,8 @@
 //the click handling part
 //grab the element
-const theBox = document.querySelector('.box');
+//const theBox = document.querySelector('.box');
 
-console.log(theBox);
+//console.log(theBox);
 
 // //create the click event
 // theBox.addEventListener('click', function() {
@@ -112,7 +112,7 @@ const oldies = ages.filter(age => age > 60);
 console.log(oldies);
 
 //select all list items and convert to array
-const lis = Array.from(document.querySelectorAll('[data-time]'));
+//const lis = Array.from(document.querySelectorAll('[data-time]'));
 
 //filter for only li's that have 'flexbox' in them
 // const filtered = lis
@@ -325,3 +325,8 @@ for (prop in es6Car) {
   console.log(prop);
   console.log(`the ${prop} is ${es6Car[prop]}`);
 }
+
+//Array.from() and Array.of()
+const arrayPs = Array.from(ps, theP =>
+  console.log(`Array.from ${theP.textContent}`)
+);
