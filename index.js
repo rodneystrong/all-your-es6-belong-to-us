@@ -343,13 +343,6 @@ const splitSpread = [...theSpread.textContent]
   .join('');
 console.log(splitSpread);
 theSpread.innerHTML = splitSpread;
-//const spanned = splitSpread.map(letter => `<span>${letter}</span>`).join('');
-//theSpread.innerHTML = spanned;
-//console.log(spanned);
 
-// splitSpread.map(item => {
-//   console.log('yeaoo');
-//   // item.addEventListener('hover', function() {
-//   //   console.log('yea yea');
-//   // });
-// });
+const moreSpread = [...document.querySelectorAll('p')];
+console.log(moreSpread);
