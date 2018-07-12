@@ -61,3 +61,7 @@ body {
   transform: translateX(0%);
   visibility: visible;
 }
+
+.jump {
+  text-align: center;
+}

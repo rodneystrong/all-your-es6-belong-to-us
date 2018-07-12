@@ -335,3 +335,9 @@ const arrayPs = Array.from(ps, theP =>
 //into the containing array.
 const allNames = [...names, ...fullNames];
 console.log(allNames);
+
+const theSpread = document.querySelector('.jump');
+console.log(theSpread);
+const splitSpread = [...theSpread.textContent];
+console.log(splitSpread);
+//
