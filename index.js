@@ -330,3 +330,8 @@ for (prop in es6Car) {
 const arrayPs = Array.from(ps, theP =>
   console.log(`Array.from ${theP.textContent}`)
 );
+
+//spread operator. spreads all the items in an iterable (array-like thing)
+//into the containing array.
+const allNames = [...names, ...fullNames];
+console.log(allNames);
