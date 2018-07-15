@@ -336,13 +336,13 @@ const arrayPs = Array.from(ps, theP =>
 const allNames = [...names, ...fullNames];
 console.log(allNames);
 
-const theSpread = document.querySelector('.jump');
-console.log(theSpread);
-const splitSpread = [...theSpread.textContent]
-  .map(letter => `<span>${letter.toUpperCase()}</span>`)
-  .join('');
-console.log(splitSpread);
-theSpread.innerHTML = splitSpread;
+// const theSpread = document.querySelector('.jump');
+// console.log(theSpread);
+// const splitSpread = [...theSpread.textContent]
+//   .map(letter => `<span>${letter.toUpperCase()}</span>`)
+//   .join('');
+// console.log(splitSpread);
+// theSpread.innerHTML = splitSpread;
 
-const moreSpread = [...document.querySelectorAll('p')];
-console.log(moreSpread);
+// const moreSpread = [...document.querySelectorAll('p')];
+// console.log(moreSpread);
