@@ -370,12 +370,11 @@ const gibPromise = fetch('https://ghibliapi.herokuapp.com/films');
 console.log(gibPromise);
 
 gibPromise
-  .then(response => {
-    console.log(response.status);
-    console.log(response.type);
-    if (response.ok) {
-      console.log(`looks like we ${response.ok}`);
-    }
+  .then(okok => okok.json())
+  .then(okok => {
+    console.log('we got our data ' + okok);
+    console.table(okok);
+    console.log(okok[0].title);
   })
   .catch(err => {
     console.log(' OH SHIT YOU GOT AN ' + err);
