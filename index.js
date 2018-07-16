@@ -363,4 +363,20 @@ function whatsup(peeps) {
   console.log(`yoo ${peeps[0]} ${peeps[3]}`);
 }
 
-whatsup(...peeps);
+//Promises, API using fetch
+//https://ghibliapi.herokuapp.com/films
+
+const gibPromise = fetch('https://ghibliapi.herokuapp.com/films');
+console.log(gibPromise);
+
+gibPromise
+  .then(response => {
+    console.log(response.status);
+    console.log(response.type);
+    if (response.ok) {
+      console.log(`looks like we ${response.ok}`);
+    }
+  })
+  .catch(err => {
+    console.log(' OH SHIT YOU GOT AN ' + err);
+  });
