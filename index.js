@@ -346,3 +346,12 @@ console.log(allNames);
 
 // const moreSpread = [...document.querySelectorAll('p')];
 // console.log(moreSpread);
+
+//grab the h2, split every letter in there, and then put those letters back into the HTML
+const theH2 = document.querySelector('.jump');
+
+const theH2text = theH2.textContent;
+console.log(' bleh h2text ' + theH2text);
+const splitH2 = [...theH2text].map(letter => `<span>${letter}</span>`).join('');
+console.log('splith2 ' + splitH2);
+theH2.innerHTML = splitH2;
