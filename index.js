@@ -348,10 +348,19 @@ console.log(allNames);
 // console.log(moreSpread);
 
 //grab the h2, split every letter in there, and then put those letters back into the HTML
-const theH2 = document.querySelector('.jump');
+// const theH2 = document.querySelector('.jump');
 
-const theH2text = theH2.textContent;
-console.log(' bleh h2text ' + theH2text);
-const splitH2 = [...theH2text].map(letter => `<span>${letter}</span>`).join('');
-console.log('splith2 ' + splitH2);
-theH2.innerHTML = splitH2;
+// const theH2text = theH2.textContent;
+// console.log(' bleh h2text ' + theH2text);
+// const splitH2 = [...theH2text].map(letter => `<span>${letter}</span>`).join('');
+// console.log('splith2 ' + splitH2);
+// theH2.innerHTML = splitH2;
+
+//spreading into a function
+const peeps = ['rach', 'alex', 'jared', 'zach'];
+
+function whatsup(peeps) {
+  console.log(`yoo ${peeps[0]} ${peeps[3]}`);
+}
+
+whatsup(...peeps);
