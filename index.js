@@ -380,13 +380,17 @@ gibPromise
     console.log(' OH SHIT YOU GOT AN ' + err);
   });
 
-const rep1 = fetch('https://ghibliapi.herokuapp.com/films').then(data =>
+const ghibfilm = fetch('https://ghibliapi.herokuapp.com/films').then(data =>
   data.json()
 );
-const rep2 = fetch('https://ghibliapi.herokuapp.com/people').then(data =>
+const ghibpeople = fetch('https://ghibliapi.herokuapp.com/people').then(data =>
   data.json()
 );
 
-Promise.all([rep1, rep2]).then(values => console.log(values[0], values[1]));
+Promise.all([ghibfilm, ghibpeople]).then(values =>
+  console.log(
+    `heeey we got ${values[0][0].title} with ${values[1][0].name} in it!`
+  )
+);
 // .then(second1 => second1.json())
 // .then((first1, second1) => console.log(first1[0].title + second1[0].name));
