@@ -366,7 +366,7 @@ function whatsup(peeps) {
 //Promises, API using fetch
 //https://ghibliapi.herokuapp.com/films
 
-const gibPromise = fetch('https://ghibliapi.herokuapp.com/films');
+const gibPromise = fetch('https://ghibliapi.herokuapp.com/');
 console.log(gibPromise);
 
 gibPromise
