@@ -366,7 +366,7 @@ function whatsup(peeps) {
 //Promises, API using fetch
 //https://ghibliapi.herokuapp.com/films
 
-const gibPromise = fetch('https://ghibliapi.herokuapp.com/');
+const gibPromise = fetch('https://ghibliapi.herokuapp.com/people');
 console.log(gibPromise);
 
 gibPromise
@@ -374,7 +374,7 @@ gibPromise
   .then(okok => {
     console.log('we got our data ' + okok);
     console.table(okok);
-    console.log(okok[0].title);
+    console.log(`name: ${okok[0].name} films: ${okok[0].films[0].title}`);
   })
   .catch(err => {
     console.log(' OH SHIT YOU GOT AN ' + err);
