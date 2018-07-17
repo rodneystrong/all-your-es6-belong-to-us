@@ -379,3 +379,14 @@ gibPromise
   .catch(err => {
     console.log(' OH SHIT YOU GOT AN ' + err);
   });
+
+const rep1 = fetch('https://ghibliapi.herokuapp.com/films').then(data =>
+  data.json()
+);
+const rep2 = fetch('https://ghibliapi.herokuapp.com/people').then(data =>
+  data.json()
+);
+
+Promise.all([rep1, rep2]).then(values => console.log(values[0], values[1]));
+// .then(second1 => second1.json())
+// .then((first1, second1) => console.log(first1[0].title + second1[0].name));
