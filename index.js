@@ -388,9 +388,10 @@ const ghibpeople = fetch('https://ghibliapi.herokuapp.com/people').then(data =>
 );
 
 Promise.all([ghibfilm, ghibpeople]).then(values =>
-  console.log(
-    `heeey we got ${values[0][0].title} with ${values[1][0].name} in it!`
-  )
+  // console.log(
+  //   `heeey we got ${values[0][0].title} with ${values[1][0].name} in it!`
+  // )
+  console.log(values[0], values[1][0])
 );
 // .then(second1 => second1.json())
 // .then((first1, second1) => console.log(first1[0].title + second1[0].name));
