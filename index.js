@@ -379,3 +379,17 @@ gibPromise
   .catch(err => {
     console.log(' OH SHIT YOU GOT AN ' + err);
   });
+
+//object literals
+let hd = 4,
+  size = 15,
+  brand = 'dell',
+  ram = 32;
+const laptop = {
+  hd,
+  size,
+  brand,
+  ram,
+};
+
+console.log(laptop);
