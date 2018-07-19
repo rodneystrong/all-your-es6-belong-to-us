@@ -398,4 +398,12 @@ const laptop = {
 console.log(laptopBrand);
 
 //making your own promise
-const myProm = new Promise();
+const myProm = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('alex promise resolved');
+  }, 2000);
+});
+
+myProm.then(data => {
+  console.log(data);
+});
