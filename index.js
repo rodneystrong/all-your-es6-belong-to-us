@@ -366,30 +366,36 @@ function whatsup(peeps) {
 //Promises, API using fetch
 //https://ghibliapi.herokuapp.com/films
 
-const gibPromise = fetch('https://ghibliapi.herokuapp.com/films');
-console.log(gibPromise);
+// const gibPromise = fetch('https://ghibliapi.herokuapp.com/films');
+// console.log(gibPromise);
 
-gibPromise
-  .then(okok => okok.json())
-  .then(okok => {
-    console.log('we got our data ' + okok);
-    console.table(okok);
-    console.log(okok[0].title);
-  })
-  .catch(err => {
-    console.log(' OH SHIT YOU GOT AN ' + err);
-  });
+// gibPromise
+//   .then(okok => okok.json())
+//   .then(okok => {
+//     console.log('we got our data ' + okok);
+//     console.table(okok);
+//     console.log(okok[0].title);
+//   })
+//   .catch(err => {
+//     console.log(' OH SHIT YOU GOT AN ' + err);
+//   });
 
 //object literals
-let hd = 4,
-  size = 15,
-  brand = 'dell',
-  ram = 32;
+let laptopHd = 4,
+  laptopSize = 15,
+  laptopBrand = 'dell',
+  laptopRam = 32;
 const laptop = {
-  hd,
-  size,
-  brand,
-  ram,
+  laptopHd,
+  laptopSize,
+  laptopBrand,
+  laptopRam,
+  showLaptop() {
+    console.log(this.laptopRam);
+  },
 };
 
-console.log(laptop);
+console.log(laptopBrand);
+
+//making your own promise
+const myProm = new Promise();
