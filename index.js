@@ -395,3 +395,31 @@ Promise.all([ghibfilm, ghibpeople]).then(values =>
 );
 // .then(second1 => second1.json())
 // .then((first1, second1) => console.log(first1[0].title + second1[0].name));
+
+//object literals
+let laptopHd = 4,
+  laptopSize = 15,
+  laptopBrand = 'dell',
+  laptopRam = 32;
+const laptop = {
+  laptopHd,
+  laptopSize,
+  laptopBrand,
+  laptopRam,
+  showLaptop() {
+    console.log(this.laptopRam);
+  },
+};
+
+console.log(laptopBrand);
+
+//making your own promise
+const myProm = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('alex promise resolved');
+  }, 2000);
+});
+
+myProm.then(data => {
+  console.log(data);
+});
