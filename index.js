@@ -366,33 +366,33 @@ function whatsup(peeps) {
 //Promises, API using fetch
 //https://ghibliapi.herokuapp.com/films
 
-const gibPromise = fetch('https://ghibliapi.herokuapp.com/people');
-console.log(gibPromise);
+// const gibPromise = fetch('https://ghibliapi.herokuapp.com/people');
+// console.log(gibPromise);
 
-gibPromise
-  .then(okok => okok.json())
-  .then(okok => {
-    console.log('we got our data ' + okok);
-    console.table(okok);
-    console.log(`name: ${okok[0].name} films: ${okok[0].films[0].title}`);
-  })
-  .catch(err => {
-    console.log(' OH SHIT YOU GOT AN ' + err);
-  });
+// gibPromise
+//   .then(okok => okok.json())
+//   .then(okok => {
+//     console.log('we got our data ' + okok);
+//     console.table(okok);
+//     console.log(`name: ${okok[0].name} films: ${okok[0].films[0].title}`);
+//   })
+//   .catch(err => {
+//     console.log(' OH SHIT YOU GOT AN ' + err);
+//   });
 
-const ghibfilm = fetch('https://ghibliapi.herokuapp.com/films').then(data =>
-  data.json()
-);
-const ghibpeople = fetch('https://ghibliapi.herokuapp.com/people').then(data =>
-  data.json()
-);
+// const ghibfilm = fetch('https://ghibliapi.herokuapp.com/films').then(data =>
+//   data.json()
+// );
+// const ghibpeople = fetch('https://ghibliapi.herokuapp.com/people').then(data =>
+//   data.json()
+// );
 
-Promise.all([ghibfilm, ghibpeople]).then(values =>
-  // console.log(
-  //   `heeey we got ${values[0][0].title} with ${values[1][0].name} in it!`
-  // )
-  console.log(values[0], values[1][0])
-);
+// Promise.all([ghibfilm, ghibpeople]).then(values =>
+//   // console.log(
+//   //   `heeey we got ${values[0][0].title} with ${values[1][0].name} in it!`
+//   // )
+//   console.log(values[0], values[1][0])
+// );
 // .then(second1 => second1.json())
 // .then((first1, second1) => console.log(first1[0].title + second1[0].name));
 
