@@ -43,13 +43,17 @@ const returnName = (dob, name = 'zaxch') => {
   //now an object?
   return name;
 };
-returnName('4/4', 'test', 'blah', 'bob');
+console.log(returnName('4/4', 'test', 'blah', 'bob'));
+
 //or
 
 const test = ({ name = 'zach', dob = 13, color = 'black' }) => {
   //in the above arguemnt, it's saying:
+  console.log(dob);
   return dob * 12 + name + color;
 };
+
+console.log(test);
 
 //test({ name: 'Test', dob: '4/4' })
 
