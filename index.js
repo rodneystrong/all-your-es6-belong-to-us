@@ -1,3 +1,8 @@
+//shortcut for console.log();
+function c(l) {
+  console.log(l);
+}
+
 //the click handling part
 //grab the element
 //const theBox = document.querySelector('.box');
@@ -425,7 +430,7 @@ const myProm = new Promise((resolve, reject) => {
 });
 
 myProm.then(data => {
-  console.log(data);
+  c(`console shortcut used ${data}`);
 });
 
 function getFilms(title) {
