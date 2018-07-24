@@ -435,13 +435,16 @@ myProm.then(data => {
 
 function getFilms(title) {
   return new Promise((resolve, reject) => {
-    const ghibfilm2 = fetch('https://ghibliapi.herokuapp.com/films');
+    const ghibfilm2 = fetch('https://ghibliapi.herokuapp.com/films').then(
+      data => data.json()
+    );
     if (ghibfilm2) {
       resolve(ghibfilm2);
     } else {
       reject(Error('no film here. rejected!'));
     }
+    return ghibfilm2;
   });
 }
 
-getFilms(data).then(console.log(`film name: ${data[0].name}`));
+getFilms(title).then(console.log(`test chain ${title}`));
