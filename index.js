@@ -374,14 +374,14 @@ function whatsup(peeps) {
 //Promises, API using fetch
 //https://ghibliapi.herokuapp.com/films
 
-/* const gibPromise = fetch('https://ghibliapi.herokuapp.com/people');
+const gibPromise = fetch('https://ghibliapi.herokuapp.com/people');
 console.log(`my gibpromise ${gibPromise}`);
 
 gibPromise
   .then(okok => okok.json())
   .then(okok => {
     console.log('we got our data ' + okok);
-    console.table(okok);
+    //console.table(okok);
     console.log(`name: ${okok[0].name} films: ${okok[0].films[0].title}`);
   })
   .catch(err => {
@@ -393,14 +393,17 @@ const ghibfilm = fetch('https://ghibliapi.herokuapp.com/films').then(data =>
 );
 const ghibpeople = fetch('https://ghibliapi.herokuapp.com/people').then(data =>
   data.json()
-); */
+);
 
-// Promise.all([ghibfilm, ghibpeople]).then(values =>
-//   // console.log(
-//   //   `heeey we got ${values[0][0].title} with ${values[1][0].name} in it!`
-//   // )
-//   console.log(values[0], values[1][0])
-// );
+Promise.all([ghibfilm, ghibpeople]).then(values =>
+  // console.log(
+  //   `heeey we got ${values[0][0].title} with ${values[1][0].name} in it!`
+  // )
+  {
+    console.log(`first values = ${values}`);
+    console.log('all promises! ' + values[0] + ' ' + values[1][0]);
+  }
+);
 // .then(second1 => second1.json())
 // .then((first1, second1) => console.log(first1[0].title + second1[0].name));
 
@@ -449,8 +452,12 @@ myProm.then(data => {
 getFilms().then(console.log(`test chain ${title}`)); */
 
 //promise chain example
-function loadFirst(url) {
-  return fetch(url).then(data => data.json());
-}
+// function loadFirst(url) {
+//   return fetch(url).then(data => data.json());
+// }
 
-c(loadFirst('https://ghibliapi.herokuapp.com/people'));
+// c(loadFirst('https://ghibliapi.herokuapp.com/people'));
+
+// function loadFilms(film) {
+//   return fetch('https://ghibliapi.herokuapp.com/');
+// }
