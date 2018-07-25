@@ -1,8 +1,7 @@
-//shortcut for console.log();
+//shortcut for console.log()
 function c(l) {
   console.log(l);
 }
-
 //the click handling part
 //grab the element
 //const theBox = document.querySelector('.box');
@@ -375,7 +374,7 @@ function whatsup(peeps) {
 //Promises, API using fetch
 //https://ghibliapi.herokuapp.com/films
 
-const gibPromise = fetch('https://ghibliapi.herokuapp.com/people');
+/* const gibPromise = fetch('https://ghibliapi.herokuapp.com/people');
 console.log(`my gibpromise ${gibPromise}`);
 
 gibPromise
@@ -394,7 +393,7 @@ const ghibfilm = fetch('https://ghibliapi.herokuapp.com/films').then(data =>
 );
 const ghibpeople = fetch('https://ghibliapi.herokuapp.com/people').then(data =>
   data.json()
-);
+); */
 
 // Promise.all([ghibfilm, ghibpeople]).then(values =>
 //   // console.log(
@@ -430,10 +429,10 @@ const myProm = new Promise((resolve, reject) => {
 });
 
 myProm.then(data => {
-  c(`console shortcut used ${data}`);
+  console.log(data);
 });
 
-function getFilms(title) {
+/* function getFilms(title) {
   return new Promise((resolve, reject) => {
     const ghibfilm2 = fetch('https://ghibliapi.herokuapp.com/films').then(
       data => data.json()
@@ -447,4 +446,11 @@ function getFilms(title) {
   });
 }
 
-getFilms(title).then(console.log(`test chain ${title}`));
+getFilms().then(console.log(`test chain ${title}`)); */
+
+//promise chain example
+function loadFirst(url) {
+  return fetch(url).then(data => data.json());
+}
+
+c(loadFirst('https://ghibliapi.herokuapp.com/people'));
