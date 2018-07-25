@@ -388,23 +388,17 @@ gibPromise
     console.log(' OH SHIT YOU GOT AN ' + err);
   });
 
-const ghibfilm = fetch('https://ghibliapi.herokuapp.com/films').then(data =>
-  data.json()
-);
-const ghibpeople = fetch('https://ghibliapi.herokuapp.com/people').then(data =>
-  data.json()
-);
+const ghibfilm = fetch('https://ghibliapi.herokuapp.com/films');
+const ghibpeople = fetch('https://ghibliapi.herokuapp.com/people');
 
-Promise.all([ghibfilm, ghibpeople]).then(values =>
-  // console.log(
-  //   `heeey we got ${values[0][0].title} with ${values[1][0].name} in it!`
-  // )
-  {
-    console.log(`first values = ${values}`);
-    console.log('all promises! ' + values[0] + ' ' + values[1][0]);
-  }
-);
-// .then(second1 => second1.json())
+Promise.all([ghibfilm, ghibpeople])
+  .then(responses => {
+    //console.log(`first values = ${ghibfilmValue} and ${ghibpeopleValue}`);
+    //console.log('all promises! ' + values);
+    return Promise.all(responses.map(res => res.json()));
+  })
+  .then(responses => console.log(`bleh ok ${responses[0][0]}`));
+// .then(second1 => seco nd1.json())
 // .then((first1, second1) => console.log(first1[0].title + second1[0].name));
 
 //object literals
