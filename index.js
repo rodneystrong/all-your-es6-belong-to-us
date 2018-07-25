@@ -395,9 +395,15 @@ Promise.all([ghibfilm, ghibpeople])
   .then(responses => {
     //console.log(`first values = ${ghibfilmValue} and ${ghibpeopleValue}`);
     //console.log('all promises! ' + values);
+
     return Promise.all(responses.map(res => res.json()));
   })
-  .then(responses => console.log(`bleh ok ${responses[0][0]}`));
+  .then(responses => {
+    const [ghibfilmValue, ghibpeopleValue] = responses;
+    console.log(
+      `bleh ok ${ghibfilmValue[0].title} and person ${ghibpeopleValue[0].name}`
+    );
+  });
 // .then(second1 => seco nd1.json())
 // .then((first1, second1) => console.log(first1[0].title + second1[0].name));
 
