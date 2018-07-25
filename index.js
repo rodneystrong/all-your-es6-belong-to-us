@@ -400,6 +400,7 @@ Promise.all([ghibfilm, ghibpeople])
   })
   .then(responses => {
     const [ghibfilmValue, ghibpeopleValue] = responses;
+
     console.log(
       `bleh ok ${ghibfilmValue[0].title} and person ${ghibpeopleValue[0].name}`
     );
